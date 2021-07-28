@@ -1,2 +1,2 @@
-# DesafioIta-Individual
+# DesafioItauIndividual
 Formulário Cadastro Pessoal 
