@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulário de Cadastro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="main-container">
+    <h1>Cadastro Pessoal</h1>
+
+    <form id="register-form" action="" method="POST">
+
+      <div class="half-box">
+        <label for="digitenome">*Nome:</label>
+        <input type="text" name="nome" id="nome" required>
+      </div>
+      <br><br>
+      <div class="half-box1">
+          <fieldset>
+          <label for="digitecpf">*CPF:</label>
+          <input type="text" id="cpf" maxlength="14" name="cpf" onblur="validarCpf(this);" required/>
+          <label for="digiterg">RG:</label>
+          <input type="text" id="rg" maxlength="12" name="cpf" onblur="validarCpf(this);"/>
+          </fieldset>
+      </div>
+      <br><br>
+      <div class="half-box2">
+        <label for="digitesexo">Sexo:</label>
+        <select class="opcoesexo" name="sexo">
+            <option disabled="disabled" selected="selected">Selecione a opção</option>
+            <option>Feminino</option>
+            <option>Masculino</option>
+        </select>
+      </div>
+      <br><br>
+      <div class="half-box3">
+        <fieldset>
+        <label for="digiteendereco">*Endereço:</label>
+        <input type="text" name="endereco" id="endereco" required>
+        <label for="digitenumero">*Número:</label>
+        <input type="text" name="numero" id="numero" required>
+        </fieldset>
+      </div>
+      <br><br>
+      <div class="half-box4">
+        <fieldset>
+        <label for="digitecep">CEP:</label>
+        <input type="text" id="cep" maxlength="10" name="cep" onblur="validarCep(this);"/>
+        <label for="digitebairro">Bairro:</label>
+        <input type="text" name="bairro" id="bairro">
+        </fieldset>
+      </div>
+      <br><br>
+      <div class="half-box5">
+        <fieldset>
+        <label for="digitecidade">Cidade:</label>
+        <input type="text" name="cidade" id="cidade"> 
+        <label for="digiteestado">Estado:</label>
+        <select class="opcoesestado" name="estado">
+            <option disabled="disabled" selected="selected">Selecione o Estado</option>
+            <option>AC</option>
+            <option>AL</option>
+            <option>AM</option>
+            <option>AP</option>
+            <option>BA</option>
+            <option>CE</option>
+            <option>DF</option>
+            <option>ES</option>
+            <option>GO</option>
+            <option>MA</option>
+            <option>MG</option>
+            <option>MS</option>
+            <option>MT</option>
+            <option>PA</option>
+            <option>PB</option>
+            <option>PE</option>
+            <option>PI</option>
+            <option>PR</option>
+            <option>RJ</option>
+            <option>RN</option>
+            <option>RO</option>
+            <option>RR</option>
+            <option>RS</option>
+            <option>SC</option>
+            <option>SE</option>
+            <option>SP</option>
+            <option>TO</option>
+        </select>
+        </fieldset>
+      </div>
+      <br><br>
+      <div class="half-box6">
+        <fieldset>
+        <label for="digitetelefone_fixo">Telefone_fixo:</label>
+        <input type="text" id="telefone_fixo" maxlength="10" name="telefone_fixo" onblur="validarTelefonefixo(this);"/>
+        <label for="digitetelefone_celular">*Telefone_celular:</label>
+        <input type="text" id="telefone_celular" maxlength="10" name="telefone_celular" onblur="validarTelefonecelular(this);"required/>
+        </fieldset> 
+      </div>
+      <br><br><br>
+      <div class="half-box6">
+        <label for="campoobrigatorio">*Campo Obrigatório</label>    
+        <input id="btn-submit" type="submit" value="Cadastrar" onclick="validar()">
+    </div>
+    </form>
+  </div>
+  <p class="error-validation template"></p>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
